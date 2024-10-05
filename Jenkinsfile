@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'your-docker-repo/spring-project:latest' // Customize if you're using Docker for deployment
         // DEPLOY_SERVER = 'remote-user@your-server-ip'  // SSH user and server IP
-        DEPLOY_PATH = '/usr/share/maven'   // Path on the remote server
+        DEPLOY_PATH = '/home/ubuntu/aisamdev'   // Path on the remote server
         JAR_FILE = 'aisamdev_java.jar'
     }
 
