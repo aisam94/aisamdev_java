@@ -73,15 +73,15 @@ pipeline {
         always {
             echo 'Pipeline finished.'
         }
-        success {
-            mail to: 'pulldtrigger94@gmail.com',
-                 subject: "Successful Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Build successful. Check Jenkins console output."
-        }
-        failure {
-            mail to: 'pulldtrigger94@gmail.com',
-                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Build failed. Check Jenkins console output."
-        }
+        // success {
+        //     mail to: 'pulldtrigger94@gmail.com',
+        //          subject: "Successful Pipeline: ${currentBuild.fullDisplayName}",
+        //          body: "Build successful. Check Jenkins console output."
+        // }
+        // failure {
+        //     mail to: 'pulldtrigger94@gmail.com',
+        //          subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+        //          body: "Build failed. Check Jenkins console output."
+        // }
     }
 }
