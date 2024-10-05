@@ -28,16 +28,16 @@ pipeline {
             }
         }
 
-        stage('Docker Build & Push') {
-            when {
-                expression { return env.BRANCH_NAME == 'main' }
-            }
-            steps {
-                script {
-                    docker.build(DOCKER_IMAGE).push() // Customize Docker repo details
-                }
-            }
-        }
+        // stage('Docker Build & Push') {
+        //     when {
+        //         expression { return env.BRANCH_NAME == 'main' }
+        //     }
+        //     steps {
+        //         script {
+        //             docker.build(DOCKER_IMAGE).push() // Customize Docker repo details
+        //         }
+        //     }
+        // }
 
         stage('Deploy') {
             steps {
