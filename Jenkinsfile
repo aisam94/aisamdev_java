@@ -64,7 +64,7 @@ pipeline {
 
                 // Run the new version of the application
                 sh '''
-                nohup java -jar ${DEPLOY_PATH}/${JAR_FILE} > ${DEPLOY_PATH}/app.log 2>&1 &
+                nohup java -jar ${DEPLOY_PATH}/${JAR_FILE} --httpPort=8081 > ${DEPLOY_PATH}/app.log 2>&1 &
                 '''
             }
         }
