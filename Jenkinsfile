@@ -6,7 +6,7 @@ pipeline {
         // DEPLOY_SERVER = 'remote-user@your-server-ip'  // SSH user and server IP
         // DEPLOY_PATH = '/path/to/deployment/folder/'   // Path on the remote server
         DEPLOY_PATH = '/home/ash/aisamdev'   // Path on the remote server
-        JAR_FILE = 'aisamdevjava.jar'
+        JAR_FILE = 'aisamdev_java.jar'
     }
 
     stages {
@@ -59,7 +59,8 @@ pipeline {
                 }
 
                 // Copy the generated jar to the deployment directory
-                sh "cp target/*.jar ${DEPLOY_PATH}/${JAR_FILE}"
+                // sh "cp target/*.jar ${DEPLOY_PATH}/${JAR_FILE}"
+                sh "cp target/*.jar ${DEPLOY_PATH}"
 
                 // Run the new version of the application
                 sh '''

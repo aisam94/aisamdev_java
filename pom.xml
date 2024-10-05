@@ -70,6 +70,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>aisamdev_java</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
