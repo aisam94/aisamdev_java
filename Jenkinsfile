@@ -60,6 +60,7 @@ pipeline {
 
                 // Copy the generated jar to the deployment directory
                 // sh "cp target/*.jar ${DEPLOY_PATH}/${JAR_FILE}"
+                sh "whoami"
                 sh "cp target/*.jar ${DEPLOY_PATH}"
 
                 // Run the new version of the application
